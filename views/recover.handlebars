@@ -1,0 +1,24 @@
+<div id="contenedor">
+  <h1>New Password</h1>
+  <form id="formRecover">
+    <input
+      type="password"
+      placeholder="New Password"
+      minlength="8"
+      required
+      id="newpassword"
+    />
+    <input
+      type="password"
+      placeholder="Repeat Password"
+      {{!-- minlength="8" --}}
+      required
+      id="reppassword"
+    />
+    <input type="hidden" name="token" value="{{token}}" id="token" />
+    <input type="submit" value="Send" />
+  </form>
+  <a href="http://localhost:8080/login">Quit</a>
+</div>
+
+<script src="/public/js/recover.js" type="application/javascript"></script>

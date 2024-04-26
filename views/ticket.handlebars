@@ -1,0 +1,73 @@
+<header>
+  <nav>
+    <ul id="lista">
+      <li><button id="back-to-cart">Back to cart</button></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <h2 id="ticket-heading">{{Head}}</h2>
+
+  <div>
+
+    <h3>Thanks for your purchase {{ticket.purcheaser}}!</h3>
+
+    <div>
+      <h4>Sumary:</h4>
+      {{#each list}}
+        <div>
+          <div>{{this.product.title}}</div>
+          <div
+          >{{this.product.price}}x{{this.quantity}}</div>
+          <div>${{multiply
+              this.product.price
+              this.quantity
+            }}</div>
+        </div>
+      {{/each}}
+    </div>
+
+    <h3>TOTAL: ${{ticket.amount}}</h3>
+
+  </div>
+</main>
+
+{{!-- <header>
+  <nav>
+    <ul id="lista">
+      <li><button id="back-to-cart">Back to cart</button></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <h1 id="cart-heading">{{Head}}</h1>
+  <h3 id="ordertitle">Ticket detail</h3>
+  <ul>
+    <li><p>code: {{ticket.code}}</p></li>
+    <li><p>purchase_datetime: {{ticket.purchase_datetime}}</p></li>
+    <li><p>amount: ${{ticket.amount}}</p></li>
+    <li><p>purchaser: {{ticket.purchaser}}</p></li>
+  </ul>
+  <hr/>
+  {{#if listExist}}
+  <h3 id="ordertitle">Order detail</h3>
+  <section id="cart-items">
+    {{#each list}}
+    <div id="cart-item-{{this.product.code}}">
+      <p>Product:</p>
+      <ul>
+        <li>Title: {{this.product.title}}</li>
+        <li>Code: {{this.product.code}}</li>
+        <li>Price: ${{this.product.price}}</li>
+        <li>Quantity: {{this.quantity}}</li>
+      </ul>
+    </div>
+    {{/each}}
+  </section>
+  <hr/>
+  <button id="pay-button">Pay My Order</button>
+  {{/if}}
+</main>
+
+<script src="/public/js/ticket.js"></script> --}}

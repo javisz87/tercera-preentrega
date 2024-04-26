@@ -1,0 +1,20 @@
+<h1>{{Head}}</h1>
+
+<label for="autor">User</label><input
+  id="inputAutor"
+  name="autor"
+  type="email"
+  disabled
+/>
+<label for="autor">Mensaje</label><input
+  id="inputMensaje"
+  name="mensaje"
+  type="text"
+/>
+<button id="btnEnviar">enviar</button>
+
+<h3>Mensajes</h3>
+<div id="mensajes"></div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/public/js/chat.js"></script>
